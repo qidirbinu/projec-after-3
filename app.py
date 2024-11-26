@@ -4,11 +4,11 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Memuat model yang sudah disimpan
-best_model_filename = 'LinearSVCTuned.pkl'
+best_model_filename = 'LinearSVC.pkl'
 best_model = pickle.load(open(best_model_filename, 'rb'))
 
 # Memuat TfidfVectorizer yang digunakan saat pelatihan model
-vectorizer_filename = 'tfidfvectoizer.pkl'  # Misalnya, jika Anda juga menyimpan vectorizer
+vectorizer_filename = 'tfidfvector.pkl'  # Misalnya, jika Anda juga menyimpan vectorizer
 vectorizer = pickle.load(open(vectorizer_filename, 'rb'))
 
 # Menambahkan antarmuka pengguna di Streamlit
