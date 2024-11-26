@@ -21,7 +21,7 @@ comment = st.text_area("Masukkan komentar di sini:")
 if st.button("Prediksi"):
     if comment.strip() == "":
         st.warning("Harap masukkan komentar terlebih dahulu!")
-   else:
+    else:
         # Menggunakan vectorizer untuk mengubah teks input menjadi fitur yang sesuai untuk model
         comment_vectorized = vectorizer.transform([comment])
 
