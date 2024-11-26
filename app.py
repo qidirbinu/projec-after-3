@@ -21,7 +21,7 @@ comment = st.text_area("Masukkan komentar di sini:")
 if st.button("Prediksi"):
     if comment.strip() == "":
         st.warning("Harap masukkan komentar terlebih dahulu!")
-    else:
+   else:
         # Menggunakan vectorizer untuk mengubah teks input menjadi fitur yang sesuai untuk model
         comment_vectorized = vectorizer.transform([comment])
 
@@ -29,11 +29,7 @@ if st.button("Prediksi"):
         prediction = best_model.predict(comment_vectorized)
 
         # Menampilkan hasil prediksi
-        #if prediction == 1:
-        #    st.write("Komentar ini **mengandung bullying**.")
-        #else:
-        #    st.write("Komentar ini **tidak mengandung bullying**.")
-        if(trained_model.predict(preprocessed_data)==1):
-            st.write("bulling")
+        if prediction == 1:
+            st.write("Komentar ini **mengandung bullying**.")
         else:
-            st.write("non bullying")
+            st.write("Komentar ini **tidak mengandung bullying**.")
